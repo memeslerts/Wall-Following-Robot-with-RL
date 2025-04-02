@@ -21,16 +21,17 @@ Installation and Loading the WS
     catkin_make
     source devel/setup.bash'
 
-Running P2D1 (Wall Following Manual Code):
+Running Manual Wall Launch Code:
 1. Run roslauch wall_follower wall_following.launch
 
-Running Any Script on P2D2:
+Running RL Wall Follower Code:
 1. In a new terminal run
     cd catkin_ws
     source devel/setup.bash
-2. For Q Learning:
+Note that each of these launch files will prompt Gazebo and RViz to open
+3. For Q Learning:
     Training: roslaunch wall_follower q_learning_train.launch
     Testing: roslaunch wall_follower q_learning_test.launch
-3. For SARSA:
+4. For SARSA:
     Training: roslaunch wall_follower sarsa_train.launch
     Testing: roslaunch wall_follower sarsa_test.launch
