@@ -1,0 +1,12 @@
+<launch>
+    <include file="$(find stingray_sim)/launch/wall_following.launch">
+        <arg name="world_file" value="$(find stingray_sim)/worlds/largemaze.world"/>
+        <arg name="x" default="-3.5" />
+        <arg name="y" default="-3.5" />
+        <arg name="z" default="0.0" />
+    </include>
+
+    <node name="sarsa" pkg="wall_follower" type="sarsa.py" output="screen" launch-prefix="bash -c 'while ! rostopic list | grep -q /scan; do sleep 1; done; $0 $@'"> 
+    </node>
+
+</launch>
